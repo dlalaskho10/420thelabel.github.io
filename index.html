@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>420 THE Label | Independent Music Label</title>
+
+<meta name="description"
+content="420 THE Label — Independent music label from Umkomaas, KwaZulu-Natal, South Africa.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090909;
+    color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(9,9,9,.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #222;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #b7ff00;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ddd;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #b7ff00;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background:
+        radial-gradient(circle at center, #222 0%, #090909 60%);
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: .9;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #b7ff00;
+}
+
+.hero p {
+    margin: 30px auto;
+    color: #aaa;
+    max-width: 650px;
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    margin: 7px;
+    border-radius: 30px;
+    background: #b7ff00;
+    color: #000;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn.dark {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 6%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+}
+
+.section-title p {
+    color: #888;
+}
+
+/* ARTISTS */
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.artist-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.artist-card:hover {
+    transform: translateY(-7px);
+    border-color: #b7ff00;
+}
+
+.artist-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.artist-info {
+    padding: 20px;
+}
+
+.artist-info h3 {
+    font-size: 1.3rem;
+}
+
+.genre {
+    color: #b7ff00;
+    font-size: .85rem;
+    font-weight: bold;
+}
+
+/* RELEASES */
+
+.release-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.release-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.release-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.release-info {
+    padding: 20px;
+}
+
+.release-info h3 {
+    margin-bottom: 5px;
+}
+
+.release-info p {
+    color: #888;
+}
+
+.release-buttons {
+    margin-top: 15px;
+}
+
+.small-btn {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 20px;
+    background: #222;
+    margin: 4px;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.small-btn:hover {
+    background: #b7ff00;
+    color: #000;
+}
+
+/* ABOUT */
+
+.about {
+    background: #101010;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    background: #111;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #222;
+}
+
+.contact-box p {
+    color: #aaa;
+    margin: 10px 0;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+footer strong {
+    color: #b7ff00;
+}
+
+/* MOBILE */
+
+@media(max-width:700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        <span>420</span> THE LABEL
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#artists">Artists</a></li>
+        <li><a href="#releases">Releases</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            420<br>
+            <span>THE LABEL</span>
+        </h1>
+
+        <p>
+            Independent sounds from Umkomaas, KwaZulu-Natal.
+            Discover new artists, new music and the next generation
+            of South African sound.
+        </p>
+
+        <a href="#artists" class="btn">
+            MEET THE ARTISTS
+        </a>
+
+        <a href="#releases" class="btn dark">
+            LISTEN TO MUSIC
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ARTISTS -->
+
+<section id="artists">
+
+    <div class="section-title">
+
+        <h2>Our Artists</h2>
+
+        <p>
+            Meet the fictional demo roster of 420 THE Label.
+        </p>
+
+    </div>
+
+
+    <div class="artist-grid">
+
+
+        <article class="artist-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80"
+            alt="YTN Thando">
+
+            <div class="artist-info">
+
+                <h3>YTN Thando</h3>
+
+                <div class="genre">
+                    AMAPIANO • AFROBEAT
+                </div>
+
+                <p>
+                    Melodic vocals and Durban-inspired energy.
+                </p>
+
+                <a class="small-btn"
+                href="#releases">
+                    MUSIC
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="artist-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+            alt="Skho Da Plug">
+
+            <div class="artist-info">
+
+                <h3>Skho Da Plug</h3>
+
+                <div class="genre">
+                    GQOM • HIP-HOP
+                </div>
+
+                <p>
+                    Heavy drums, street energy and raw delivery.
+                </p>
+
+                <a class="small-btn"
+                href="#releases">
+                    MUSIC
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="artist-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"
+            alt="Lwazi 420">
+
+            <div class="artist-info">
+
+                <h3>Lwazi 420</h3>
+
+                <div class="genre">
+                    TRAP • DRILL
+                </div>
+
+                <p>
+                    Dark production and energetic flows.
+                </p>
+
+                <a class="small-btn"
+                href="#releases">
+                    MUSIC
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="artist-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80"
+            alt="Nala Vee">
+
+            <div class="artist-info">
+
+                <h3>Nala Vee</h3>
+
+                <div class="genre">
+                    AFROBEAT • AMAPIANO
+                </div>
+
+                <p>
+                    Smooth vocals with modern African rhythms.
+                </p>
+
+                <a class="small-btn"
+                href="#releases">
+                    MUSIC
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="artist-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80"
+            alt="Mvelo X">
+
+            <div class="artist-info">
+
+                <h3>Mvelo X</h3>
+
+                <div class="genre">
+                    GQOM • ELECTRO
+                </div>
+
+                <p>
+                    Electronic textures and club-focused production.
+                </p>
+
+                <a class="small-btn"
+                href="#releases">
+                    MUSIC
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="artist-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=800&q=80"
+            alt="Zee Montana">
+
+            <div class="artist-info">
+
+                <h3>Zee Montana</h3>
+
+                <div class="genre">
+                    HIP-HOP • TRAP
+                </div>
+
+                <p>
+                    Punchlines, melodies and modern trap production.
+                </p>
+
+                <a class="small-btn"
+                href="#releases">
+                    MUSIC
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- RELEASES -->
+
+<section id="releases">
+
+    <div class="section-title">
+
+        <h2>Latest Releases</h2>
+
+        <p>
+            Demo releases for the 420 THE Label website.
+        </p>
+
+    </div>
+
+
+    <div class="release-grid">
+
+
+        <article class="release-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80"
+            alt="Ngyak'thanda Crazy">
+
+            <div class="release-info">
+
+                <h3>Ngyak'thanda Crazy</h3>
+
+                <p>YTN Thando • Single</p>
+
+                <div class="release-buttons">
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    Spotify
+                    </a>
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="release-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1571266028243-d220c9c3b4f1?auto=format&fit=crop&w=800&q=80"
+            alt="eThekwini Nights">
+
+            <div class="release-info">
+
+                <h3>eThekwini Nights</h3>
+
+                <p>Skho Da Plug • Single</p>
+
+                <div class="release-buttons">
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    Spotify
+                    </a>
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="release-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80"
+            alt="No Sleep">
+
+            <div class="release-info">
+
+                <h3>No Sleep</h3>
+
+                <p>Lwazi 420 • Single</p>
+
+                <div class="release-buttons">
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    Spotify
+                    </a>
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="release-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80"
+            alt="Uthando Lwami">
+
+            <div class="release-info">
+
+                <h3>Uthando Lwami</h3>
+
+                <p>Nala Vee • Single</p>
+
+                <div class="release-buttons">
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    Spotify
+                    </a>
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="release-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1571974599782-87624638275f?auto=format&fit=crop&w=800&q=80"
+            alt="Durban Bounce">
+
+            <div class="release-info">
+
+                <h3>Durban Bounce</h3>
+
+                <p>Mvelo X • Single</p>
+
+                <div class="release-buttons">
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    Spotify
+                    </a>
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="release-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+            alt="Plug Talk">
+
+            <div class="release-info">
+
+                <h3>Plug Talk</h3>
+
+                <p>Zee Montana • Single</p>
+
+                <div class="release-buttons">
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    Spotify
+                    </a>
+
+                    <a class="small-btn"
+                    href="#"
+                    onclick="demoLink(event)">
+                    YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+    <div class="section-title">
+
+        <h2>About 420 THE Label</h2>
+
+    </div>
+
+    <div class="about-content">
+
+        <p>
+            420 THE Label is an independent music label based in
+            Umkomaas, KwaZulu-Natal, South Africa.
+        </p>
+
+        <p>
+            Our mission is to develop fresh artists, create original
+            sounds and connect South African music with listeners
+            everywhere.
+        </p>
+
+        <p>
+            From Gqom and Amapiano to Afrobeat, Hip-Hop, Trap and
+            Drill — this is where different sounds come together.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="section-title">
+
+        <h2>Contact 420 THE Label</h2>
+
+        <p>
+            Demo bookings, collaborations and business enquiries.
+        </p>
+
+    </div>
+
+    <div class="contact-box">
+
+        <h3>Umkomaas, KwaZulu-Natal</h3>
+
+        <p>
+            📍 South Africa
+        </p>
+
+        <p>
+            🎵 Independent Music Label
+        </p>
+
+        <a class="btn"
+        href="mailto:contact@420thelabel.example">
+            EMAIL THE LABEL
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>420 THE Label</strong>
+    </p>
+
+    <p>
+        Independent music from KwaZulu-Natal 🇿🇦
+    </p>
+
+</footer>
+
+
+<script>
+
+function demoLink(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Demo link: replace this button with the artist's real Spotify or YouTube URL."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
